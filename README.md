@@ -1,7 +1,7 @@
 # AuthoLoad
 
-Autho_load is a first attempt to dry up authorization and resource loading in our controllers. I wanted something with usage similar to Ryan Bate's CanCan,
-but using only the loading class' own model as the single authority on access. 
+Autho_load is an experiment in creating a scheme similar to Ryan Bate's CanCan for authrozation and pre-loading of resources, but that did not require 
+the ability table instead using only the loading classes own model as the athoratative granter of access. 
 
 ## Installation
 
@@ -33,7 +33,7 @@ accomodate additional ones.</dd>
 
 Assuming the class you want to call autho_load on is called Post, do the following:
 
-1. Add <u>extend</u> AuthoLoad to the the model. Note that's extend, not include. 
+1. Add <u>extend</u> AuthoLoad to the the model. Note that's extend, not include, as these will be class methods. 
 class Post < ActiveRecord::Base
   extend AuthoLoad
   
